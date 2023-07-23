@@ -9,8 +9,16 @@ import InfoIcon from '@mui/icons-material/Info';
 import StoreIcon from '@mui/icons-material/Store';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectUser } from './features/userSlice';
+import { auth } from './firebase';
 
 function Header(){
+    const dispatch = useDispatch();
+    const logoutOfApp = () => {;
+        dispatch(logout())
+        auth.signOut();
+    };
     return(
         <div className='header'>
 
@@ -30,7 +38,7 @@ function Header(){
                 <HeaderOption Icon={ShoppingBagIcon} title='Sell'/>
                 <HeaderOption Icon={StoreIcon} title='Store'/>
                 <HeaderOption Icon={SupervisorAccountIcon} title='Community'/>
-                <HeaderOption Icon={AccountCircleIcon} title='Profile'/>
+                <HeaderOption avatar={true} title='Profile' onClick={logoutOfApp}/>
             </div>
         </div>
     )
