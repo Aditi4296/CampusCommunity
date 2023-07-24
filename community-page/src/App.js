@@ -37,6 +37,7 @@ function App() {
         <Login />
       ):(
       <div className='app__body'>
+        
         <SideBar />
         <Feed />
         <Widgets />

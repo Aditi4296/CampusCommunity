@@ -1,9 +1,12 @@
 .app{
-    background-color: #f3f2ef;
+    /* background-color: #f3f2ef; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #cfd5f7;
+    /* background-color: #cfd5f7; */
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .app__body{
@@ -14,5 +17,14 @@
     max-width: 1200px;
     margin-left: 20px;
     margin-right: 20px;
+}
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
 }
 

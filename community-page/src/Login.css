@@ -5,15 +5,22 @@
     margin-right: auto;
     padding-top: 100px;
     padding-bottom: 100px;
+    
 }
 
 .login > h1{
     object-fit: contain;
+    font-family: 'Times New Roman', Times, serif;
     height: 70px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
+/* .login > img{
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+} */
 .login > form{
     display: flex;
     flex-direction: column;

@@ -3,6 +3,7 @@ import {auth} from "./firebase";
 import { login } from './features/userSlice';
 import './Login.css';
 import { useDispatch } from 'react-redux';
+// import background from './images/background.jpg';
 
 function Login(){
     const [email,setEmail] = useState("");
@@ -36,7 +37,7 @@ function Login(){
         e.preventDefault();
 
         auth.signInWithEmailAndPassword(email,password)
-        .then(userAuth => {
+        .then((userAuth) => {
             dispatch(login({
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
@@ -47,7 +48,8 @@ function Login(){
     };
     return(
         <div className = "login">
-            <h1>Login Page</h1>
+            {/* <img src={background} alt=""/> */}
+            <h1>Join Our Community</h1>
             <form>
                 <input value = {name} onChange={(e) => setName(e.target.value)}placeholder="Full name (required if registering)" type="text"/>
                 <input value = {profilePic} onChange={(e) => setProfilePic(e.target.value)}placeholder="Profile Pic URL (optional)"type="text"/>
