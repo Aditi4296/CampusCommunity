@@ -36,7 +36,7 @@ export const userSlice = createSlice({
     },
     // Use the PayloadAction type to declare the contents of `action.payload`
     logout: (state) => {
-      state.user += null;
+      state.user = null;
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
